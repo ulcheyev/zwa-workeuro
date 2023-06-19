@@ -1,30 +1,25 @@
-function reg() {
-    window.location = "/Registration/reg2.html";
+// Definice 
+const form = document.querySelector('.filterProJobs')
+const vacancy = document.querySelector('#vacancy')
+const company = document.querySelector('#company')
+// Nasataveni udalosti
+form.addEventListener('submit', validate)
+vacancy.addEventListener('blur', () => validateIn(vacancy))
+company.addEventListener('blur', () => validateIn(company))
+
+//Validace pri blur.
+function validateIn(elem){
+    if(elem.value.classList = "failFilter"){
+         if(elem.value != ""){
+             elem.classList = "inputFilter"
+         }
+    }
 }
-
-// POPUP
-const openPopUp = document.getElementById('open_pop_up');
-const  closePopUp = document.getElementById('close_pop_up');
-const popUp = document.getElementById('pop_up');
-
-openPopUp.addEventListener('click', function(e){
-    e.preventDefault()
-    popUp.classList.add('active')
-})
-
-closePopUp.addEventListener('click', () => {
-    popUp.classList.remove('active')
-})
-
-// POPUP
- 
-// SCROLL
-function scrollToHandler() {
-    window.scrollTo({
-        top: 300,
-        behavior: "smooth",
-    });
+// Validace inputu po kliknuti tlacitka.
+function validate(event){
+    if(vacancy.value == "" && company.value == "" ){
+        event.preventDefault()
+        vacancy.classList = 'failFilter'
+        company.classList = 'failFilter'
+    }
 }
-const scrollFindAJob = document.getElementById("find_a_job");
-scrollFindAJob.addEventListener('click', scrollToHandler)
-// SCROLL
