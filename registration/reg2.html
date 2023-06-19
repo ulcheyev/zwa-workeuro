@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WORKEURO</title>
+    <link rel="stylesheet" href="reg2_style.css">
+</head>
+<body>
+    <header>
+		<a href="/index.html" class="logo">WORKEURO</a>
+		<nav>
+			<ul class="nav_links"> 
+				<li><a href="#">Post a job</a></li>
+				<li><a href="#">Find a job</a></li>
+				<li><a href="#">Blog</a></li>
+				
+			</ul>
+		</nav>
+        <input class="nav_links_right" type="submit" value="SignUp/LogIn" onclick="reg()">
+	</header>
+    <div class="hero">
+        <div class="form">
+            <div class="button-box">
+                <div id="btn"></div>
+                <input type="button" value="Log In" onclick="login()"/>
+                <input type="button" value="Sign Up" onclick="register()"/> 
+            </div>
+            <form id="login"  method="post" class="input-form">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name='login' class="input-field" placeholder="Username" required/>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="login" class="input-field" placeholder="Password" required/>
+                <input type="submit" class="submit" value="Log In">
+            </form>
+            <form id="register"  method="post" class="input-form">
+                <label for="usernamereg">Username: </label>
+                <input type="text" id="usernamereg" name="register" class="input-field" placeholder="Username" size='12' maxlength="12" required/>
+                <label for="passwordreg">Password: </label>
+                <input type="password" id="passwordreg" name="register" class="input-field" placeholder="Password" required/>
+                <label for="passwordreg">Confirm password: </label>
+                <input type="password" id="passwordregconfirm" name="register" class="input-field" placeholder="Confirm password" required/>
+                <input type="submit" class="submit" name="register" value="Register">
+            </form>
+        </div>
+    </div>
+    <footer>
+		<div class="linksdolu">
+			<a href="/index.html" class="logofooter">WORKEURO</a>
+			<ul class="footer_links"> 
+				<li><a href="#">Post a job</a></li>
+				<li><a href="#">Find a job</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="/Registration/reg2.html" >Sign Up/Log In</a></li>
+				<li><p>Copyright&copy; 2021 WORKEURO. All right reserved.</p></li>
+			</ul>	
+		</div>
+    </footer>
+<script src="reg2_java.js"></script>
+</body>
+</html>

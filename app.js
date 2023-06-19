@@ -1,0 +1,30 @@
+function reg() {
+    window.location = "/Registration/reg2.html";
+}
+
+// POPUP
+const openPopUp = document.getElementById('open_pop_up');
+const  closePopUp = document.getElementById('close_pop_up');
+const popUp = document.getElementById('pop_up');
+
+openPopUp.addEventListener('click', function(e){
+    e.preventDefault()
+    popUp.classList.add('active')
+})
+
+closePopUp.addEventListener('click', () => {
+    popUp.classList.remove('active')
+})
+
+// POPUP
+ 
+// SCROLL
+function scrollToHandler() {
+    window.scrollTo({
+        top: 300,
+        behavior: "smooth",
+    });
+}
+const scrollFindAJob = document.getElementById("find_a_job");
+scrollFindAJob.addEventListener('click', scrollToHandler)
+// SCROLL
